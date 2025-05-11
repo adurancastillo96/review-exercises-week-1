@@ -8,8 +8,18 @@ function XO(str) {
     let xCounter = 0;
     let oCounter = 0;
     // Recorremos la string
-    for (let i = 0; i < str.length; i++) {
-        let letter = str[i].toLowerCase(); // Creamos una variable que guarde el índice en minúsculas
+    //for (let i = 0; i < str.length; i++) {
+    //    let letter = str[i].toLowerCase(); // Creamos una variable que guarde el índice en minúsculas
+
+    //    if (letter === "x") {
+    //        xCounter++;
+    //    } else if (letter === "o") {
+    //        oCounter++;
+    //    }
+    //}
+
+    for (const value of str) {
+        letter = value.toLowerCase(); // Creamos una variable que guarde el índice en minúsculas
 
         if (letter === "x") {
             xCounter++;
@@ -17,6 +27,7 @@ function XO(str) {
             oCounter++;
         }
     }
+
     return xCounter === oCounter;
 }
 
